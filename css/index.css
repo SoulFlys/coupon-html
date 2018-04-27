@@ -38,8 +38,7 @@ FFB292
 }
 
 .warp {
-    background-color: #FF966A;
-    height: 500px;
+    height: 440px;
     background: url('../imgs/warp_bg.png') no-repeat center #FFB292;
 }
 
@@ -52,11 +51,8 @@ FFB292
 
 .plugin-list {
     width: 400px;
-    /* margin: 0 auto; */
-    /* padding: 200px 0 10px; */
-    /* margin-top: 50px; */
     margin: 0 auto 10px;
-    padding: 350px;
+    padding: 300px 0 0;
 }
 
 .plugin-list:after{
@@ -104,8 +100,8 @@ FFB292
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
     background-color: #26AE76;
-background-image: linear-gradient(to bottom, #34c78c,#26AE76);
-border: 1px solid #26AE76;
+    background-image: linear-gradient(to bottom, #34c78c,#26AE76);
+    border: 1px solid #26AE76;
     float: left;
 }
 .arrow {
@@ -145,17 +141,26 @@ border: 1px solid #26AE76;
 .plugin-version span {
     color: #fff;
 }
-
+.banner {
+    margin: 10px auto 50px;
+}
+.swiper-container {
+    width: 750px;
+    height: 430px;
+}
+.swiper-container img{
+    width: 750px;
+    height: 410px;
+}
 .footer {
     width: auto;
     height: 60px;
-    background: #FFF;
+    /* background: #FFF;
     position: fixed;
     top: atuo;
     right: 0;
     bottom: 0;
     left: 0;
-    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); */
-    z-index: 10000;
+    z-index: 10000; */
     text-align: center;
 }
