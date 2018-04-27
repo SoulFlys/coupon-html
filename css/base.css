@@ -90,3 +90,10 @@ p, div {
 p[contenteditable] {
     outline: none;
 }
+
+img {
+    max-width: 100%;
+    display: block;
+    border: 0;
+    outline: 0;
+}
