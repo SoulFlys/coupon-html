@@ -39,7 +39,7 @@ FFB292
 
 .warp {
     height: 440px;
-    background: url('../imgs/warp_bg.png') no-repeat center #FFB292;
+    background: url('http://static.67one.com/imgs/warp_bg.png') no-repeat center #FFB292;
 }
 
 .plugin-info {
