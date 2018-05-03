@@ -1,0 +1,240 @@
+.warp {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 35px;
+    line-height: 35px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #f3f3f3;
+    *zoom: 1;
+}
+
+header:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+}
+
+header .welcome {
+    float: left;
+}
+
+header .status {
+    float: right;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #FF0036;
+    background-color: #fff;
+}
+
+.nav ul {
+    *zoom: 1;
+}
+
+.nav ul:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 0 40px;
+    height: 40px;
+    line-height: 42px;
+    font-size: 16px;
+    text-align: center;
+    color: #444;
+}
+
+.nav li.active a {
+    color: #fff;
+    background: #FF4069;
+}
+
+.con {
+    background-color: #f6f6f6;
+}
+
+.con .plugin {
+    background: #FF7391;
+}
+
+.con .plugin .warp {
+    background: url(../img/plugin_bg.png) no-repeat center 50px;
+}
+
+.con .plugin .plugin-con {
+    width: 485px;
+    padding: 117px 0 45px;
+    margin: 0 auto;
+}
+
+.con .plugin .plugin-con .plugin-title {
+    width: 462px;
+    height: 100px;
+    background: url(../img/plugin_title.png) no-repeat center;
+    margin: 0 auto 28px;
+}
+
+.con .plugin .plugin-con .plugin-desc {
+    padding: 0 32px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.con .plugin .plugin-con .plugin-desc h2 {
+    display: inline;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.con .plugin .plugin-con .plugin-install {
+    margin: 40px auto 0;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    color: #fff;
+    *zoom: 1;
+}
+
+.con .plugin .plugin-con .plugin-install:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+}
+
+.con .plugin .plugin-con .plugin-install .install-btn {
+    width: 368px;
+    height: 68px;
+    line-height: 68px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    -webkit-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    border: 1px solid #00a674;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #30BF94;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#23c393), to(#30BF94));
+    background-image: -webkit-linear-gradient(top, #23c393, #30BF94);
+    background-image: -moz-linear-gradient(top, #23c393, #30BF94);
+    background-image: -o-linear-gradient(top, #23c393, #30BF94);
+    background-image: linear-gradient(to bottom, #23c393, #30BF94);
+    float: left;
+}
+
+.con .plugin .plugin-con .plugin-install .install-btn span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-left: 12px;
+}
+
+.con .plugin .plugin-con .plugin-install .plugin-arrow {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: -1px;
+    padding: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    height: 70px;
+    -webkit-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+    border: 1px solid #00a674;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #30BF94;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#23c393), to(#30BF94));
+    background-image: -webkit-linear-gradient(top, #23c393, #30BF94);
+    background-image: -moz-linear-gradient(top, #23c393, #30BF94);
+    background-image: -o-linear-gradient(top, #23c393, #30BF94);
+    background-image: linear-gradient(to bottom, #23c393, #30BF94);
+    float: left;
+}
+
+.con .plugin .plugin-con .plugin-install .arrow {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.con .plugin .plugin-con .plugin-ver {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    min-height: 20px;
+}
+
+.con .plugin .plugin-con .plugin-ver b {
+    margin: 0 4px;
+}
+
+.con .plugin .plugin-con .plugin-ver span {
+    margin-left: 10px;
+}
+
+.con .plugin .plugin-con .plugin-ver span a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.con .banner {
+    padding-top: 45px;
+    background: #fff;
+}
+
+.con .banner .banner-warp {
+    margin: 0 auto;
+    width: 750px;
+    height: 440px;
+}
+
+.con .banner .swiper-container {
+    width: 750px;
+    height: 440px;
+}
+
+footer {
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.browser {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url("../img/browser.png") no-repeat;
+    vertical-align: middle;
+}
+
+.browser.browser-chrome {
+    width: 40px;
+    height: 40px;
+    background-position: 0 -329px;
+}

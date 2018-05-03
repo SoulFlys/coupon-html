@@ -1,0 +1,305 @@
+@import 'function.scss';
+
+// $main-color: #FF0036;
+// $second-color: #FF4069;
+// $second-color: #FF7391;
+// BF304F
+.warp {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    @include linHeight(35px);
+    background: #f8f8f8;
+    border-bottom: 1px solid #f3f3f3;
+    @include clearfix;
+    .welcome {float: left}
+    .status {float: right}
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #FF0036;
+    background-color: #fff;
+    ul {@include clearfix}
+    li {
+        float: left;
+        a {
+            @include db;
+            padding: 0 40px;
+            height: 40px;
+            line-height: 42px;
+            font-size: 16px;
+            text-align: center;
+            color: #444;
+        }
+        &.active {
+            a {
+                color: #fff;
+                background: #FF4069;
+            }
+        }
+    }
+}
+
+.con {
+    background-color: #f6f6f6;
+
+    .plugin {
+        background: #FF7391;
+        .warp {
+            background: url(../img/plugin_bg.png) no-repeat center 50px;
+        }
+        .plugin-con {
+            width: 485px;
+            padding: 117px 0 45px;
+            margin: 0 auto;
+            .plugin-title {
+                width: 462px;
+                height: 100px;
+                background: url(../img/plugin_title.png) no-repeat center;
+                margin: 0 auto 28px;
+            }
+            .plugin-desc {
+                padding: 0 32px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 26px;
+                h2 {
+                    display: inline;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-right: 8px;
+                }
+            }
+            .plugin-install {
+                margin: 40px auto 0;
+                text-align: center;
+                width: 400px;
+                position: relative;
+                color: #fff;
+                @include clearfix;
+                .install-btn {
+                    width: 368px;
+                    @include linHeight(68px);
+                    @include dib;
+                    border-radius: 4px 0 0 4px;
+                    font-size: 16px;
+                    border: 1px solid #00a674;
+                    text-shadow: 0 1px rgba(0,0,0,0.1);
+                    background-color: #30BF94;
+                    background-image: linear-gradient(to bottom, #23c393, #30BF94);
+                    float: left;
+                    span {
+                        @include dib;
+                        vertical-align: middle;
+                        font-size: 20px;
+                        margin-left: 12px;
+                    }
+                }
+                .plugin-arrow {
+                    @include dib;
+                    margin-left: -1px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    text-align: center;
+                    height: 70px;
+                    border-radius: 0 4px 4px 0;
+                    border: 1px solid #00a674;
+                    text-shadow: 0 1px rgba(0,0,0,0.1);
+                    background-color: #30BF94;
+                    background-image: linear-gradient(to bottom, #23c393, #30BF94);
+                    float: left;
+                }
+                .arrow {
+                    @include dib;
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    border-top: 4px solid;
+                    border-right: 4px solid transparent;
+                    border-left: 4px solid transparent;
+
+                }
+            }
+            .plugin-ver {
+                margin-top: 20px;
+                text-align: center;
+                color: #fff;
+                min-height: 20px;
+                b {
+                    margin: 0 4px;
+                }
+                span {
+                    margin-left: 10px;
+                    a {
+                        margin-right: 10px;
+                        color: #fff;
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .banner {
+        padding-top: 45px;
+        background: #fff;
+        .banner-warp {
+            margin: 0 auto;
+            width: 750px;
+            height: 440px;
+        }
+        .swiper-container {
+            width: 750px;
+            height: 440px;
+        }
+    }
+}
+
+footer {
+    width: auto;
+    @include linHeight(60px);
+    text-align: center;
+}
+
+.browser {
+    @include dib;
+    background: url('../img/browser.png') no-repeat;
+    vertical-align: middle;
+    &.browser-chrome {
+        width: 40px;
+        height: 40px;
+        background-position: 0 -329px;
+    }
+}
+
+// .wrapper {
+//
+// }
+//
+// .header {
+//     width: auto;
+//     height: 60px;
+//     background: #FFF;
+//     @include position(fixed, $top:0, $left:0, $right:0, $bottom: auto, $zIndex:1000);
+//     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+//     .header-con {
+//         width: 1200px;
+//         min-height: 1px;
+//         margin: 0 auto;
+//         @include linHeight(60px);
+//         .logo {
+//             height: 50px;
+//             margin: 5px auto;
+//         }
+//     }
+// }
+//
+// .container {
+//     margin-top: 60px;
+//     overflow: hidden;
+//     .warp {
+//         height: 440px;
+//         background: url('http://static.67one.com/imgs/warp_bg.png') no-repeat center #FFB292;
+//     }
+//     .plugin-list {
+//         width: 400px;
+//         margin: 0 auto 10px;
+//         padding: 300px 0 0;
+//         @include clearfix;
+//         .plugin-btn {
+//             width: 368px;
+//             @include linHeight(68px);
+//             @include position(relative);
+//             @include dib;
+//             border-radius: 4px 0 0 4px;
+//             font-size: 16px;
+//             color: #fff;
+//             text-shadow: 0 1px rgba(0,0,0,0.1);
+//             background-color: #26AE76;
+//             background-image: linear-gradient(to bottom, #34c78c,#26AE76);
+//             border: 1px solid #26AE76;
+//             float: left;
+//             text-align: center;
+//             i, span {
+//                 vertical-align: middle;
+//                 @include dib;
+//             }
+//             span {
+//                 font-size: 20px;
+//             }
+//         }
+//         .dropdown-btn {
+//             margin-left: -1px;
+//             padding: 0 10px;
+//             cursor: pointer;
+//             text-align: center;
+//             height: 70px;
+//             border-radius: 0 4px 4px 0;
+//             @include position(relative);
+//             @include dib;
+//             color: #fff;
+//             text-shadow: 0 1px rgba(0,0,0,0.1);
+//             background-color: #26AE76;
+//             background-image: linear-gradient(to bottom, #34c78c,#26AE76);
+//             border: 1px solid #26AE76;
+//             float: left;
+//         }
+//         .arrow {
+//             @include dib;
+//             width: 0;
+//             height: 0;
+//             vertical-align: middle;
+//             border-top: 4px solid;
+//             border-right: 4px solid transparent;
+//             border-left: 4px solid transparent;
+//             cursor: pointer;
+//             text-align: center;
+//         }
+//
+//         .plugin-btn:hover, .dropdown-btn:hover, .plugin-btn:active, .dropdown-btn:active {
+//             color: #fff;
+//             background-color: #26AE76;
+//             background-image: linear-gradient(to bottom, #26AE76,#259467);
+//             border: 1px solid #26AE76;
+//             z-index: 2;
+//             -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+//             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+//         }
+//
+//         .plugin-btn:active, .dropdown-btn:active {
+//             background-image: none;
+//             z-index: 2
+//         }
+//     }
+//     .plugin-version {
+//         width: 400px;
+//         margin: 0 auto;
+//         text-align: center;
+//         line-height: 24px;
+//         span {
+//             color: #fff;
+//         }
+//     }
+//     .banner {
+//         margin: 10px auto 50px;
+//         .swiper-container {
+//             width: 750px;
+//             height: 430px;
+//         }
+//         .swiper-container img{
+//             width: 750px;
+//             height: 410px;
+//         }
+//     }
+// }
+//
+// .footer {
+//     width: auto;
+//     height: 60px;
+//     text-align: center;
+// }
