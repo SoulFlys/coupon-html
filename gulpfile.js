@@ -3,6 +3,11 @@ var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
+
+// 打包后更改资源路径为cdn
+// var rev = require('gulp-rev');
+// var revCollector = require('gulp-rev-collector');
+
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var production = process.env.NODE_ENV === 'production';
@@ -10,7 +15,7 @@ var production = process.env.NODE_ENV === 'production';
 gulp.task('html', function() {
     gulp.src('./src/*.jade')
         .pipe(jade({pretty: production ? false : '\t'}))
-        .pipe(gulp.dest('./docs/'));
+        .pipe(gulp.dest('./docs/'))
 });
 
 gulp.task('sass', function() {
@@ -26,7 +31,7 @@ gulp.task('sass', function() {
 gulp.task('css', function() {
     gulp.src('./src/css/*.css')
         .pipe(autoprefixer({browsers: ['last 50 versions']}))
-        .pipe(gulp.dest('./docs/css/'));
+        .pipe(gulp.dest('./docs/css/'))
 });
 
 gulp.task('script', function() {
@@ -56,5 +61,11 @@ gulp.task('auto', function() {
 });
 
 
+// gulp.task('rev', function () {
+//
+// });
+
 gulp.task('default', ['html', 'css', 'sass', 'script', 'image', 'server', 'auto']);
 gulp.task('build', ['html', 'css', 'sass', 'script', 'image']);
+
+// gulp.task('default', ['rev']);
