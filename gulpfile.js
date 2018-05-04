@@ -15,13 +15,13 @@ const fs = require('fs');
 const revCollector = require('gulp-rev-collector');
 
 gulp.task('html', function() {
-    gulp.src('./src/*.jade')
+    return gulp.src('./src/*.jade')
         .pipe(jade({pretty: '\t'}))
         .pipe(gulp.dest('./docs/'))
 });
 
 gulp.task('sass', function() {
-    gulp.src('./src/scss/*.scss')
+    return gulp.src('./src/scss/*.scss')
         .pipe(sass({
             outputStyle: 'expanded',
             indentWidth: 4
@@ -31,21 +31,26 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css', function() {
-    gulp.src('./src/css/*.css')
+    return gulp.src('./src/css/*.css')
         .pipe(autoprefixer({browsers: ['last 50 versions']}))
         .pipe(gulp.dest('./docs/css/'))
 });
 
 gulp.task('script', function() {
-    gulp.src(['./src/js/*.js', '!./src/js/swiper-4.2.2.min.js'])
+    return gulp.src('./src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(production ? uglify() : jshint())
         .pipe(gulp.dest('./docs/js/'));
 });
 
+gulp.task('lib', function() {
+    return gulp.src('./src/lib/**')
+        .pipe(gulp.dest('./docs/lib/'))
+});
+
 gulp.task('image', function() {
-    gulp.src('./src/img/*.*')
+    return gulp.src('./src/img/*.*')
         .pipe(gulp.dest('./docs/img/'));
 });
 
@@ -67,13 +72,14 @@ gulp.task('writeRevManifest', function() {
 });
 
 gulp.task('revHtml', function () {
-    gulp.src(['./rev-manifest.json', './docs/*.html'])
+    return gulp.src(['./rev-manifest.json', './docs/*.html'])
         .pipe(revCollector({
             replaceReved: true,
             dirReplacements: {
                 './css': 'http://static.67one.com/css/',
                 './js': 'http://static.67one.com/js/',
                 './img': 'http://static.67one.com/img/',
+                './lib': 'http://static.67one.com/lib/',
             }
         }))
         .pipe(htmlmin({
@@ -88,7 +94,7 @@ gulp.task('revHtml', function () {
 });
 
 gulp.task('revCss', function () {
-    gulp.src(['./rev-manifest.json', './docs/css/*.css'])
+    return gulp.src(['./rev-manifest.json', './docs/css/*.css'])
         .pipe(revCollector({
             replaceReved: true,
             dirReplacements: {
@@ -100,8 +106,9 @@ gulp.task('revCss', function () {
 });
 
 
-gulp.task('default', ['html', 'css', 'sass', 'script', 'image', 'server', 'auto']);
-gulp.task('build', ['html', 'css', 'sass', 'script', 'image', 'writeRevManifest', 'revHtml', 'revCss']);
+gulp.task('default', ['html', 'css', 'sass', 'script', 'lib', 'image', 'server', 'auto']);
+gulp.task('build', ['html', 'css', 'sass', 'script', 'lib', 'image']);
+gulp.task('push', ['writeRevManifest', 'revHtml', 'revCss']);
 
 
 function writeRevManifest() {
