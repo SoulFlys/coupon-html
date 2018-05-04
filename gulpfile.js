@@ -54,6 +54,11 @@ gulp.task('image', function() {
         .pipe(gulp.dest('./docs/img/'));
 });
 
+gulp.task('ico', function() {
+    return gulp.src('./src/*.ico')
+        .pipe(gulp.dest('./docs/'));
+});
+
 gulp.task('server', function() {
     browserSync.init({server: "./docs"});
 });
@@ -106,8 +111,8 @@ gulp.task('revCss', function () {
 });
 
 
-gulp.task('default', ['html', 'css', 'sass', 'script', 'lib', 'image', 'server', 'auto']);
-gulp.task('build', ['html', 'css', 'sass', 'script', 'lib', 'image']);
+gulp.task('default', ['html', 'css', 'sass', 'script', 'lib', 'image', 'ico', 'server', 'auto']);
+gulp.task('build', ['html', 'css', 'sass', 'script', 'lib', 'image', 'ico']);
 gulp.task('push', ['writeRevManifest', 'revHtml', 'revCss']);
 
 
