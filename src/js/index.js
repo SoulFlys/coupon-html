@@ -1,5 +1,5 @@
 window.onload = function() {
-    console.log(2);
+    console.log('Welcome 67one');
     var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         autoplay:true,

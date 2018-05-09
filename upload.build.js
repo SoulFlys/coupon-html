@@ -23,7 +23,7 @@ let docs = fs.readdirSync(docsPath);
 let files = [], refreshUrlCDN = [];
 
 docs.forEach(item => {
-    let fileDirPath = docsPath + '\\' + item;
+    let fileDirPath = docsPath.replace(/\\/g, '/') + '/' + item;
     let stat = fs.statSync(fileDirPath)
     if(stat.isDirectory()){
         let filesList = fs.readdirSync(fileDirPath);
