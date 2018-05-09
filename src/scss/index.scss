@@ -285,3 +285,19 @@ footer {
         background-position: 0 -734px;
     }
 }
+
+
+@media (-webkit-max-device-pixel-ratio: 1) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #c2c2c2;
+        background-clip: padding-box;
+        min-height: 28px;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: #fff;
+    }
+}
